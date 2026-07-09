@@ -1,0 +1,111 @@
+# =========================
+# Xcode
+# =========================
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+## Obj-C/Swift specific
+*.hmap
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# =========================
+# Swift Package Manager
+# =========================
+.build/
+.swiftpm/
+Packages/
+Package.resolved
+*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+
+# Nếu app dùng SPM local packages và bạn muốn track Package.resolved
+# (để đảm bảo build reproducible) thì bỏ dòng "Package.resolved" ở trên đi.
+
+# =========================
+# CocoaPods (nếu sau này chuyển sang dùng)
+# =========================
+# Pods/
+# Podfile.lock
+
+# =========================
+# Carthage (nếu sau này chuyển sang dùng)
+# =========================
+# Carthage/Build/
+
+# =========================
+# macOS system files
+# =========================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# =========================
+# Fastlane (nếu về sau thêm vào để tự động hoá build/notarize)
+# =========================
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# =========================
+# Sparkle / Signing keys — QUAN TRỌNG, không bao giờ commit
+# =========================
+*.pem
+*.p12
+*.mobileprovision
+eddsa_private_key*
+private_key*
+*.cer
+
+# Sparkle tools tải về (không cần commit, tự tải lại khi cần)
+sparkle-tools/
+sparkle-tools.tar.xz
+
+# =========================
+# Build artifacts của release workflow
+# =========================
+*.zip
+*.dmg
+!appcast-template.xml
+
+# =========================
+# Environment / secrets khác
+# =========================
+.env
+.env.local
+*.keychain
+*.keychain-db
+
+# =========================
+# IDE khác (nếu có dùng)
+# =========================
+.vscode/
+.idea/

@@ -6,13 +6,47 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		83221C512FDB08220084DFD3 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 83221C502FDB08220084DFD3 /* HotKey */; };
+		83ACA2FD2FF7FFC6009B7849 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 83ACA2FC2FF7FFC6009B7849 /* Sparkle */; };
+		83DBCBB12FD9AB6100DB0F64 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 83DBCBB02FD9AB6100DB0F64 /* GRDB */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		839B5C652FD85A740050242B /* PasteHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasteHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		830173C22FF94B6D00B162EB /* Exceptions for "scripts" folder in "PasteHub" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				make_dmg_bg.swift,
+			);
+			target = 839B5C642FD85A740050242B /* PasteHub */;
+		};
+		834A60BE2FDD920900695ED5 /* Exceptions for "PasteHub" folder in "PasteHub" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 839B5C642FD85A740050242B /* PasteHub */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		830173C02FF94B6D00B162EB /* scripts */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				830173C22FF94B6D00B162EB /* Exceptions for "scripts" folder in "PasteHub" target */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
 		839B5C672FD85A740050242B /* PasteHub */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				834A60BE2FDD920900695ED5 /* Exceptions for "PasteHub" folder in "PasteHub" target */,
+			);
 			path = PasteHub;
 			sourceTree = "<group>";
 		};
@@ -23,6 +57,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83ACA2FD2FF7FFC6009B7849 /* Sparkle in Frameworks */,
+				83221C512FDB08220084DFD3 /* HotKey in Frameworks */,
+				83DBCBB12FD9AB6100DB0F64 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +71,7 @@
 			children = (
 				839B5C672FD85A740050242B /* PasteHub */,
 				839B5C662FD85A740050242B /* Products */,
+				830173C02FF94B6D00B162EB /* scripts */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,10 +99,14 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				830173C02FF94B6D00B162EB /* scripts */,
 				839B5C672FD85A740050242B /* PasteHub */,
 			);
 			name = PasteHub;
 			packageProductDependencies = (
+				83DBCBB02FD9AB6100DB0F64 /* GRDB */,
+				83221C502FDB08220084DFD3 /* HotKey */,
+				83ACA2FC2FF7FFC6009B7849 /* Sparkle */,
 			);
 			productName = PasteHub;
 			productReference = 839B5C652FD85A740050242B /* PasteHub.app */;
@@ -91,9 +133,15 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = 839B5C5C2FD85A740050242B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				83DBCBAF2FD9AB6100DB0F64 /* XCRemoteSwiftPackageReference "GRDB" */,
+				83221C4F2FDB08220084DFD3 /* XCRemoteSwiftPackageReference "HotKey" */,
+				83ACA2FB2FF7FFC6009B7849 /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 839B5C662FD85A740050242B /* Products */;
 			projectDirPath = "";
@@ -130,6 +178,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -184,6 +233,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -193,6 +243,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -240,6 +291,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};
@@ -248,14 +300,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AKS48F45KV;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = PasteHub/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PasteHub;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026. All rights reserved";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -278,14 +336,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AKS48F45KV;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = PasteHub/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PasteHub;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026. All rights reserved";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -325,6 +389,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		83221C4F2FDB08220084DFD3 /* XCRemoteSwiftPackageReference "HotKey" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soffes/HotKey";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		83ACA2FB2FF7FFC6009B7849 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.4;
+			};
+		};
+		83DBCBAF2FD9AB6100DB0F64 /* XCRemoteSwiftPackageReference "GRDB" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		83221C502FDB08220084DFD3 /* HotKey */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83221C4F2FDB08220084DFD3 /* XCRemoteSwiftPackageReference "HotKey" */;
+			productName = HotKey;
+		};
+		83ACA2FC2FF7FFC6009B7849 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83ACA2FB2FF7FFC6009B7849 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+		83DBCBB02FD9AB6100DB0F64 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83DBCBAF2FD9AB6100DB0F64 /* XCRemoteSwiftPackageReference "GRDB" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 839B5C5D2FD85A740050242B /* Project object */;
 }

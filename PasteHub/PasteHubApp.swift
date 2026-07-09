@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct PasteHubApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
+        var body: some Scene {
+            // Không có WindowGroup — đây là menu bar only app
+            Settings {
+                EmptyView()
+            }
         }
-    }
 }
