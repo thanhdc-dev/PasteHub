@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>PasteHub Changelog</title>
+        <link>https://thanhdc-dev.github.io/PasteHub/appcast.xml</link>
+        <description>PasteHub cập nhật tự động</description>
+        <language>vi</language>
+        <!-- Item mới sẽ tự động được thêm vào đây bởi GitHub Actions -->
+    </channel>
+</rss>
