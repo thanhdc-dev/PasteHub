@@ -28,7 +28,9 @@ A lightweight macOS menu bar app that keeps your clipboard history accessible �
 
 ⌨️ **Global shortcut** — Default `⌘⌥V` to open/close clipboard history
 
-❌ **No Accessibility API required** — PasteHub does **not** need Accessibility permissions. It works by copying the selected item to your clipboard — you still paste manually with `⌘V`.
+🚀 **Auto-paste (Opt-in)** — Optionally paste automatically (`⌘V`) into the active app immediately after selecting an item. Requires Accessibility permission only if enabled.
+
+❌ **No Accessibility API by default** — PasteHub does **not** require Accessibility permissions by default. If Auto-paste is off, it simply copies the item to your clipboard for manual pasting with `⌘V`.
 
 ## Architecture
 
@@ -49,6 +51,7 @@ PasteHub/
 │   └── ExcludedApp.swift             # Model for apps excluded from clipboard monitoring
 │
 ├── Services/                         # Business logic & side effects — singleton managers
+│   ├── AutoPasteManager.swift        # Singleton: controls simulated Cmd+V auto-paste & accessibility permissions
 │   ├── ClipboardMonitor.swift        # ObservableObject: polls NSPasteboard, detects changes,
 │   │                                 #   coordinates save/load/search with DatabaseManager
 │   ├── DatabaseManager.swift         # SQLite via GRDB: migrations, CRUD, search, trim/cleanup
@@ -123,7 +126,7 @@ PasteHub/
 2. Grant clipboard access permission when prompted (macOS will ask automatically).
 3. Copy anything as usual — PasteHub saves it automatically
 4. Press `⌘⌥V` to open clipboard history
-5. Click any item (or press `Enter`) to copy it to your clipboard, then use `⌘V` to paste it wherever you like
+5. Click any item (or press `Enter`) to copy it to your clipboard. If **Auto Paste** is enabled in Settings, the item is automatically pasted into the active application; otherwise, you paste it manually using `⌘V`.
 6. Navigate with `↑`/`↓`, press `Space` for QuickLook preview, `Delete` to remove
 7. Pin important items by clicking the pin icon or using the context menu
 
@@ -175,6 +178,7 @@ Accessible via the gear icon in the popover header. Options:
 | **Save images** | Whether to store copied images | Enabled |
 | **Save file paths** | Whether to store copied file URLs | Disabled |
 | **Launch at login** | Start PasteHub automatically on login | Disabled |
+| **Auto Paste** | Automatically simulate ⌘V after selecting an item (requires Accessibility permission) | Disabled |
 | **Excluded apps** | Bundle IDs/short names to ignore | – |
 
 ## Privacy
@@ -192,7 +196,7 @@ PasteHub respects your privacy:
 | `⌘⌥V` | Open/close clipboard history |
 | `⌘,` | Open settings |
 | `↑` / `↓` | Navigate items |
-| `Enter` | Copy selected item to clipboard (then manually paste with `⌘V`) |
+| `Enter` | Copy selected item to clipboard (and automatically paste if Auto Paste is enabled) |
 | `Space` | QuickLook preview (image, text) |
 | `Delete` | Remove item from history |
 | `Esc` | Clear search → close popover |
