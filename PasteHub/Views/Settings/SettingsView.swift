@@ -1,6 +1,7 @@
 import SwiftUI
 import HotKey
 import ServiceManagement
+import Combine
 
 struct SettingsView: View {
     // MARK: - Settings State
@@ -16,6 +17,10 @@ struct SettingsView: View {
     @State private var isRecordingShortcut = false
     @State private var shortcutDisplay = ShortcutManager.shared.shortcutDisplayString
     @State private var showRestartAlert = false
+
+    @AppStorage("autoPasteEnabled") var autoPasteEnabled: Bool = false
+    @State private var isAccessibilityGranted = AutoPasteManager.shared.isAccessibilityGranted
+    private let accessibilityCheckTimer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -168,6 +173,65 @@ struct SettingsView: View {
                             displayString: $shortcutDisplay,
                             isRecording: $isRecordingShortcut
                         )
+                    }
+
+                    // ── Auto Paste ─────────────────
+                    sectionHeader(String(localized: "settings.section.autopaste"))
+
+                    settingRow {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("settings.autoPaste")
+                                .font(.system(size: 13))
+                            Text("settings.autoPaste.description")
+                                .font(.system(size: 11))
+                                .foregroundStyle(.tertiary)
+                        }
+                        Spacer()
+                        Toggle("", isOn: $autoPasteEnabled)
+                            .toggleStyle(.switch)
+                            .labelsHidden()
+                            .onChange(of: autoPasteEnabled) { _, enabled in
+                                if enabled && !AutoPasteManager.shared.isAccessibilityGranted {
+                                    AutoPasteManager.shared.requestAccessibilityPermission()
+                                }
+                            }
+                    }
+
+                    Divider().padding(.leading, 14)
+
+                    // Status indicator
+                    settingRow {
+                        HStack {
+                            Image(systemName: isAccessibilityGranted ? "checkmark.shield.fill" : "xmark.shield.fill")
+                                .foregroundStyle(isAccessibilityGranted ? .green : .red)
+                            Text(isAccessibilityGranted ? "settings.autoPaste.accessibilityGranted" : "settings.autoPaste.accessibilityDenied")
+                                .font(.system(size: 12))
+                                .foregroundStyle(.secondary)
+                        }
+                        Spacer()
+                        if !isAccessibilityGranted {
+                            Button("settings.autoPaste.openSettings") {
+                                AutoPasteManager.shared.openAccessibilityPreferences()
+                            }
+                            .buttonStyle(.bordered)
+                            .controlSize(.small)
+                        }
+                    }
+                    .onAppear {
+                        isAccessibilityGranted = AutoPasteManager.shared.isAccessibilityGranted
+                    }
+                    .onReceive(accessibilityCheckTimer) { _ in
+                        isAccessibilityGranted = AutoPasteManager.shared.isAccessibilityGranted
+                    }
+
+                    Divider().padding(.leading, 14)
+
+                    settingRow {
+                        Text("settings.autoPaste.footnote")
+                            .font(.system(size: 11))
+                            .foregroundStyle(.tertiary)
+                            .lineLimit(nil)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
 
                     // ── Dữ liệu ──────────────────

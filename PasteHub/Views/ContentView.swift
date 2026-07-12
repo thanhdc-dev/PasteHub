@@ -77,11 +77,13 @@ struct ContentView: View {
                                           self.searchText = ""
                                           self.monitor.search(query: "")
                                       },
-                                      onEnter: { item in
-                                          self.monitor.copyToPasteboard(item)
-                                          NSHapticFeedbackManager.defaultPerformer.perform(.alignment, performanceTime: .default)
-                                          AppDelegate.shared.closePopover()
-                                      },
+                                       onEnter: { item in
+                                           self.monitor.copyToPasteboard(item)
+                                           NSHapticFeedbackManager.defaultPerformer.perform(.alignment, performanceTime: .default)
+                                           let previousApp = AppDelegate.shared.previousFrontmostApp
+                                           AppDelegate.shared.closePopover()
+                                           AutoPasteManager.shared.performAutoPaste(previousApp: previousApp)
+                                       },
                                       showSettings: self.showSettings)
             }
             keyboard.start()
@@ -306,7 +308,9 @@ struct ContentView: View {
             onCopy: {
                 monitor.copyToPasteboard(item)
                 NSHapticFeedbackManager.defaultPerformer.perform(.alignment, performanceTime: .default)
+                let previousApp = AppDelegate.shared.previousFrontmostApp
                 AppDelegate.shared.closePopover()
+                AutoPasteManager.shared.performAutoPaste(previousApp: previousApp)
             },
             onPin: {
                 withAnimation(.easeInOut(duration: 0.2)) { monitor.togglePin(item) }
