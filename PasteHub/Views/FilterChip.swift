@@ -67,14 +67,12 @@ struct FilterChip: View {
             .padding(.vertical, 5)
             .background(
                 Capsule()
-                    .fill(isSelected
-                          ? Color.accent.opacity(0.12)
-                          : Color.clear)
+                    .fill(Color.clear)
                     .overlay(
                         Capsule()
                             .stroke(
                                 isSelected
-                                    ? Color.accent.opacity(0.4)
+                                    ? Color.accent
                                     : Color(NSColor.separatorColor),
                                 lineWidth: 0.5
                             )

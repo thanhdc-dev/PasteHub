@@ -8,13 +8,13 @@ extension Color {
     static let iconFile   = Color(hex: "#E6F1FB")
 
     // Icon foregrounds
-    static let iconTextFG  = Color(hex: "#B8860B") // Gold đậm, hài hòa với accent mới
+    static let iconTextFG  = Color(hex: "#B8860B")
     static let iconURLFG   = Color(hex: "#0F6E56")
     static let iconImageFG = Color(hex: "#854F0B")
     static let iconFileFG  = Color(hex: "#185FA5")
 
     // Accent chính
-    static let accent = Color(hex: "#D4AF37") // Gold cổ điển
+    static let accent = Color(hex: "#185FA5")
 
     // Helper init từ hex string
     init(hex: String) {
