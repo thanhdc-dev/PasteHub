@@ -11,7 +11,8 @@ on:
         description: "Version giả để test (không tạo tag/release thật, chỉ build thử)"
         required: true
         default: "0.0.1-test"
-
+permissions:
+    contents: write
 jobs:
   build-and-release:
     runs-on: macos-15
