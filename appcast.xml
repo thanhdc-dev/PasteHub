@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
-        <item>
-    <title>Version 1.1.0</title>
-    <sparkle:releaseNotesLink>
-        https://github.com/thanhdc-dev/PasteHub/releases/tag/v1.1.0
-    </sparkle:releaseNotesLink>
-    <pubDate>Thu, 16 Jul 2026 14:10:51 +0000</pubDate>
-    <sparkle:version>8</sparkle:version>
-    <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
-    <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-    <enclosure
-        url="https://github.com/thanhdc-dev/PasteHub/releases/download/v1.1.0/PasteHub-Installer-1.1.dmg"
-        sparkle:edSignature="sparkle:edSignature="IZiaO6Tpl0JgCjxnI7yJ+ewVkKMpkT6c76890fjHcNQevGhuvn/O11pzsTh9BX+VHVY/TcILljP9Ewm728+YAg==" length="3197524""
-        length="3197524"
-        type="application/x-apple-diskimage" />
-</item>
-
         <title>PasteHub Changelog</title>
         <link>https://thanhdc-dev.github.io/PasteHub/appcast.xml</link>
         <description>PasteHub cập nhật tự động</description>
