@@ -11,10 +11,10 @@
 	<key>SUFeedURL</key>
 	<string>https://thanhdc-dev.github.io/PasteHub/appcast.xml</string>
 	<key>SUPublicEDKey</key>
-	<string>fkkWmoN7BwuWURqLjYgXozX3aDXvNBVQ+iO86NaKzGA=&lt;</string>
+	<string>fkkWmoN7BwuWURqLjYgXozX3aDXvNBVQ+iO86NaKzGA=</string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUScheduledCheckInterval</key>
-	<string>86400</string>
+	<real>86400</real>
 </dict>
 </plist>
