@@ -11,8 +11,12 @@ on:
         description: "Version giả để test (không tạo tag/release thật, chỉ build thử)"
         required: true
         default: "0.0.1-test"
+
+# GITHUB_TOKEN mặc định chỉ có quyền read-only từ giữa 2023.
+# contents: write là bắt buộc để: (1) tạo GitHub Release, (2) git push lên nhánh gh-pages.
 permissions:
-    contents: write
+  contents: write
+
 jobs:
   build-and-release:
     runs-on: macos-15
@@ -86,11 +90,14 @@ jobs:
           echo "✅ Tìm thấy: $DMG_PATH"
 
       # ---- TẢI SPARKLE TOOLS (generate_keys / sign_update / generate_appcast) ----
+      # LƯU Ý: chỉ file "Sparkle-X.Y.Z.tar.xz" (bản đầy đủ) mới chứa thư mục bin/
+      # với các tool dòng lệnh. File "Sparkle-for-Swift-Package-Manager.zip" chỉ chứa
+      # XCFramework để link vào app qua SPM — KHÔNG có sign_update/generate_keys.
       - name: Download Sparkle tools
         run: |
           set -euo pipefail
 
-          # Xác định tag mới nhất qua redirect của /releases/latest
+          # Xác định tag mới nhất qua redirect của /releases/latest, thay vì đoán tên file
           LATEST_URL=$(curl -sIL -o /dev/null -w '%{url_effective}' \
             "https://github.com/sparkle-project/Sparkle/releases/latest")
           TAG="${LATEST_URL##*/}"
@@ -102,6 +109,8 @@ jobs:
           mkdir -p sparkle-tools
           tar -xf sparkle-tools.tar.xz -C sparkle-tools
 
+          # Verify ngay tại đây — fail rõ ràng ở bước này nếu thiếu tool,
+          # thay vì để lỗi trôi xuống bước sign_update phía sau.
           if [ ! -x sparkle-tools/bin/sign_update ]; then
             echo "❌ Không tìm thấy sparkle-tools/bin/sign_update sau khi giải nén"
             find sparkle-tools -maxdepth 2
@@ -111,12 +120,28 @@ jobs:
 
       # ---- KÝ FILE DMG ----
       # SPARKLE_PRIVATE_KEY: lưu trong GitHub Secrets, dạng base64 của private key EdDSA
+      #
+      # LƯU Ý: sign_update KHÔNG in ra base64 signature trần trụi — nó in sẵn cả cụm
+      # attribute hoàn chỉnh dạng: sparkle:edSignature="XXXX" length="1234"
+      # Phải tách riêng phần base64 bên trong dấu ngoặc kép, nếu không sẽ bị lồng quote
+      # và làm gãy XML khi ghi vào appcast.xml (lỗi "Couldn't find end of Start Tag").
       - name: Sign update with Sparkle private key
         env:
           SPARKLE_PRIVATE_KEY: ${{ secrets.SPARKLE_PRIVATE_KEY }}
         run: |
+          set -euo pipefail
           echo "$SPARKLE_PRIVATE_KEY" | base64 --decode > private_key.pem
-          SIGNATURE=$(./sparkle-tools/bin/sign_update "${{ steps.dmg.outputs.path }}" -f private_key.pem)
+
+          SIGN_OUTPUT=$(./sparkle-tools/bin/sign_update "${{ steps.dmg.outputs.path }}" -f private_key.pem)
+          echo "Raw sign_update output: $SIGN_OUTPUT"
+
+          SIGNATURE=$(echo "$SIGN_OUTPUT" | sed -n 's/.*sparkle:edSignature="\([^"]*\)".*/\1/p')
+
+          if [ -z "$SIGNATURE" ]; then
+            echo "❌ Không tách được signature hợp lệ từ output của sign_update"
+            exit 1
+          fi
+
           echo "SIGNATURE=$SIGNATURE" >> $GITHUB_ENV
           rm private_key.pem
 
