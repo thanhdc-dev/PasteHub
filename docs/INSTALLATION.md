@@ -22,21 +22,22 @@ Khi mở ứng dụng lần đầu, bạn có thể gặp các cảnh báo sau:
 
 Để mở PasteHub một cách an toàn, bạn có thể thực hiện theo một trong ba phương pháp dưới đây:
 
-### Phương pháp 1: Nhấp chuột phải để mở (Khuyên dùng - Đơn giản nhất)
-Đây là cách dễ thực hiện nhất và không cần mở Terminal:
-1. Tìm tệp `PasteHub.app` trong Finder (thông thường nằm trong thư mục `/Applications`).
-2. **Nhấp chuột phải** (hoặc nhấn giữ phím Control và click chuột) vào biểu tượng ứng dụng → Chọn **Open** (Mở).
-3. Một hộp thoại xác nhận sẽ xuất hiện. Nhấp chọn nút **Open** (Mở) một lần nữa để xác nhận.
-4. Bạn chỉ cần thực hiện việc này một lần duy nhất. Những lần khởi chạy sau, bạn có thể mở bình thường bằng cách nhấp đúp chuột.
-
-### Phương pháp 2: Cho phép chạy từ Cấu hình Hệ thống
+### Phương pháp 1: Cho phép chạy từ Cấu hình Hệ thống
 Nếu việc nhấp đúp chuột đã chặn ứng dụng, bạn có thể cấp quyền chạy ứng dụng trong phần Cấu hình Hệ thống:
 1. Hãy thử nhấp đúp để mở PasteHub một lần để macOS ghi nhận lượt thử mở ứng dụng bị chặn.
 2. Mở **System Settings** (Cấu hình Hệ thống) → Chọn mục **Privacy & Security** (Quyền riêng tư & Bảo mật).
 3. Cuộn xuống phần *Security* (Bảo mật) và tìm dòng thông báo: *"PasteHub.app" was blocked from use because it is not from an identified developer*.
 4. Nhấp chọn nút **Open Anyway** (Vẫn mở).
 
-### Phương pháp 3: Xóa cờ kiểm duyệt (Quarantine flag) bằng Terminal
+<p align="center">
+  <img src="assets/screenshot-step-1-install.png" alt="PasteHub — Cài đặt - Step 1" width="32%">
+  &nbsp;
+  <img src="assets/screenshot-step-2-install.png" alt="PasteHub — Cài đặt - Step 2" width="32%">
+  &nbsp;
+  <img src="assets/screenshot-step-3-install.png" alt="PasteHub — Cài đặt - Step 3" width="32%">
+</p>
+
+### Phương pháp 2: Xóa cờ kiểm duyệt (Quarantine flag) bằng Terminal
 Nếu macOS báo tệp tin bị "hỏng/damaged" và các cách trên không hoạt động, đó là do trình duyệt web đã tự động gắn cờ kiểm duyệt vào tệp tin khi tải về. Bạn có thể gỡ bỏ cờ này bằng cách:
 1. Mở ứng dụng **Terminal** trên macOS.
 2. Chạy câu lệnh sau:

@@ -22,21 +22,22 @@ You may encounter one of these warnings:
 
 To open PasteHub safely, use one of the three methods below:
 
-### Method 1: Right-Click to Open (Recommended)
-This is the simplest way and does not require using the Terminal:
-1. Locate `PasteHub.app` in Finder (usually in your `/Applications` folder).
-2. **Right-click** (or Control-click) the app icon and select **Open**.
-3. A confirmation dialog will appear. Click **Open** to confirm.
-4. You only need to do this once. Future launches will open normally by double-clicking.
-
-### Method 2: Allow via System Settings
+### Method 1: Allow via System Settings
 If double-clicking blocked the app, you can allow it in your system settings:
 1. Try opening PasteHub once so macOS registers the blocked attempt.
 2. Open **System Settings** → **Privacy & Security**.
 3. Scroll down to the *Security* section to find the message: *"PasteHub.app" was blocked from use because it is not from an identified developer*.
 4. Click **Open Anyway**.
 
-### Method 3: Remove the Quarantine Flag via Terminal
+<p align="center">
+  <img src="assets/screenshot-step-1-install.png" alt="PasteHub — Cài đặt - Step 1" width="32%">
+  &nbsp;
+  <img src="assets/screenshot-step-2-install.png" alt="PasteHub — Cài đặt - Step 2" width="32%">
+  &nbsp;
+  <img src="assets/screenshot-step-3-install.png" alt="PasteHub — Cài đặt - Step 3" width="32%">
+</p>
+
+### Method 2: Remove the Quarantine Flag via Terminal
 If macOS claims the app is "damaged" and won't let you use the options above, it is likely because the file has a quarantine flag attached when downloaded from a web browser. You can clear this flag:
 1. Open the **Terminal** app.
 2. Run the following command:

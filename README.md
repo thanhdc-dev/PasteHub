@@ -33,7 +33,7 @@ Một ứng dụng menubar macOS nhẹ, chạy trực tiếp trên hệ điều 
 - ⚡ **Tự động lưu Clipboard** — Tự động lưu lại văn bản, liên kết (URL), hình ảnh (PNG), và đường dẫn tệp tin khi bạn thực hiện sao chép.
 - 🔍 **Tìm kiếm nhanh** — Tìm kiếm tức thì trong lịch sử với SQLite-backed full-text search
 - 📌 **Ghim mục yêu thích** — Giữ các mục thường dùng luôn ở đầu danh sách để tránh bị xóa khi dọn dẹp lịch sử.
-- 🎨 **Giao diện macOS thuần bản địa** — Thiết kế tối giản, hỗ trợ chế độ Sáng và Tối (Light/Dark mode).
+- 🎨 **Giao diện macOS thuần** — Thiết kế tối giản, hỗ trợ chế độ Sáng và Tối (Light/Dark mode).
 - 🔒 **Riêng tư & Ngoại tuyến** — Toàn bộ dữ liệu được lưu trữ cục bộ tại thư mục `~/Library/Application Support/PasteHub`, hoàn toàn không đồng bộ cloud.
 - 🔄 **Tự động cập nhật** — Cập nhật phiên bản mới tự động và an toàn trong nền nhờ Sparkle framework.
 - 🧹 **Tự dọn dẹp** — Tự động xóa bỏ các mục cũ, không ghim sau một số ngày thiết lập (mặc định: lưu trữ vĩnh viễn).
