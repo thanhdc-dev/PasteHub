@@ -13,6 +13,8 @@ struct SettingsView: View {
     @AppStorage("saveFilePaths")  var saveFilePaths: Bool = true
     @AppStorage("retentionDays")  var retentionDays: Int = 0  // 0 = mãi mãi
     @AppStorage("appLanguage")    var appLanguage: String = Locale.current.language.languageCode?.identifier == "vi" ? "vi" : "en"
+    @AppStorage("autoCheckForUpdates") var autoCheckForUpdates: Bool = true
+    @AppStorage("updateCheckIntervalHours") var updateCheckIntervalHours: Int = 24
 
     @State private var isRecordingShortcut = false
     @State private var shortcutDisplay = ShortcutManager.shared.shortcutDisplayString
@@ -133,6 +135,51 @@ struct SettingsView: View {
                     ExcludeSettingsSection()
                         .padding(.horizontal, 14)
                         .padding(.bottom, 8)
+
+                    // ── Cập nhật ─────────────────
+                    sectionHeader(String(localized: "settings.section.updates"))
+
+                    settingRow {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("settings.autoCheckForUpdates")
+                                .font(.system(size: 13))
+                            Text("settings.autoCheckForUpdates.description")
+                                .font(.system(size: 11))
+                                .foregroundStyle(.tertiary)
+                        }
+                        Spacer()
+                        Toggle("", isOn: $autoCheckForUpdates)
+                            .toggleStyle(.switch)
+                            .labelsHidden()
+                            .onChange(of: autoCheckForUpdates) { _, _ in
+                                AppDelegate.shared.updaterViewModel.refreshPeriodicChecks()
+                            }
+                    }
+
+                    Divider().padding(.leading, 14)
+
+                    settingRow {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("settings.updateCheckInterval")
+                                .font(.system(size: 13))
+                            Text("settings.updateCheckInterval.description")
+                                .font(.system(size: 11))
+                                .foregroundStyle(.tertiary)
+                        }
+                        Spacer()
+                        Picker("", selection: $updateCheckIntervalHours) {
+                            Text("settings.updateCheckInterval.1h").tag(1)
+                            Text("settings.updateCheckInterval.6h").tag(6)
+                            Text("settings.updateCheckInterval.24h").tag(24)
+                            Text("settings.updateCheckInterval.72h").tag(72)
+                        }
+                        .pickerStyle(.menu)
+                        .frame(width: 95)
+                        .disabled(!autoCheckForUpdates)
+                        .onChange(of: updateCheckIntervalHours) { _, _ in
+                            AppDelegate.shared.updaterViewModel.refreshPeriodicChecks()
+                        }
+                    }
 
                     // ── Hệ thống ─────────────────
                     sectionHeader(String(localized: "settings.section.system"))
