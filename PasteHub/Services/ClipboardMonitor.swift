@@ -4,9 +4,8 @@ import Combine
 class ClipboardMonitor: ObservableObject {
     @Published var items: [ClipboardItem] = []
 
-    private var timer: Timer?
+    private var pasteboardObserver: NSObjectProtocol?
     private var lastChangeCount: Int = NSPasteboard.general.changeCount
-    private let pollInterval = 0.5
     private let db = DatabaseManager.shared
 
     // MARK: - Lifecycle
@@ -15,18 +14,25 @@ class ClipboardMonitor: ObservableObject {
         // Load items từ DB khi khởi động
         loadFromDatabase()
 
-        timer = Timer.scheduledTimer(
-            withTimeInterval: pollInterval,
-            repeats: true
+        guard pasteboardObserver == nil else { return }
+
+        let pasteboard = NSPasteboard.general
+        lastChangeCount = pasteboard.changeCount
+
+        pasteboardObserver = NotificationCenter.default.addObserver(
+            forName: Notification.Name("NSPasteboardDidChangeNotification"),
+            object: pasteboard,
+            queue: .main
         ) { [weak self] _ in
             self?.checkForChanges()
         }
-        RunLoop.main.add(timer!, forMode: .common)
     }
 
     func stop() {
-        timer?.invalidate()
-        timer = nil
+        if let observer = pasteboardObserver {
+            NotificationCenter.default.removeObserver(observer)
+        }
+        pasteboardObserver = nil
     }
 
     // MARK: - Core Logic
