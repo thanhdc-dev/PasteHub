@@ -1,4 +1,5 @@
 import SwiftUI
+import Combine
 
 // MARK: - ContentView
 
@@ -12,6 +13,7 @@ struct ContentView: View {
     @State private var showClearConfirm = false
     @State private var showSettings = false
     @State private var showOnboarding = false
+    @State private var searchDebounceCancellable: AnyCancellable?
 
     // ObservableObject — thay đổi trigger re-render toàn bộ view tree
     @StateObject private var selection = SelectionState()
@@ -87,15 +89,15 @@ struct ContentView: View {
                                       searchText: self.searchText,
                                       onSearchClear: {
                                           self.searchText = ""
-                                          self.monitor.search(query: "")
+                                          self.handleSearchQueryChange("")
                                       },
-                                       onEnter: { item in
-                                           self.monitor.copyToPasteboard(item)
-                                           NSHapticFeedbackManager.defaultPerformer.perform(.alignment, performanceTime: .default)
-                                           let previousApp = AppDelegate.shared.previousFrontmostApp
-                                           AppDelegate.shared.closePopover()
-                                           AutoPasteManager.shared.performAutoPaste(previousApp: previousApp)
-                                       },
+                                      onEnter: { item in
+                                          self.monitor.copyToPasteboard(item)
+                                          NSHapticFeedbackManager.defaultPerformer.perform(.alignment, performanceTime: .default)
+                                          let previousApp = AppDelegate.shared.previousFrontmostApp
+                                          AppDelegate.shared.closePopover()
+                                          AutoPasteManager.shared.performAutoPaste(previousApp: previousApp)
+                                      },
                                       showSettings: self.showSettings)
             }
             keyboard.start()
@@ -109,7 +111,27 @@ struct ContentView: View {
                 showOnboarding = true
             }
         }
-        .onDisappear { keyboard.stop() }
+        .onDisappear {
+            keyboard.stop()
+            searchDebounceCancellable?.cancel()
+        }
+    }
+
+    private func handleSearchQueryChange(_ query: String) {
+        selection.index = 0
+        searchDebounceCancellable?.cancel()
+
+        let trimmedQuery = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmedQuery.isEmpty else {
+            monitor.search(query: "")
+            return
+        }
+
+        searchDebounceCancellable = Just(trimmedQuery)
+            .delay(for: .milliseconds(220), scheduler: RunLoop.main)
+            .sink { [weak monitor] debouncedQuery in
+                monitor?.search(query: debouncedQuery)
+            }
     }
 
     // MARK: - Key Handler (static — tránh capture self)
@@ -251,15 +273,13 @@ struct ContentView: View {
                         .font(.system(size: 13))
                         .textFieldStyle(.plain)
                         .onChange(of: searchText) { _, query in
-                            monitor.search(query: query)
-                            selection.index = 0
+                            handleSearchQueryChange(query)
                         }
 
                     if !searchText.isEmpty {
                         Button {
                             searchText = ""
-                            monitor.search(query: "")
-                            selection.index = 0
+                            handleSearchQueryChange("")
                         } label: {
                             Image(systemName: "xmark.circle.fill")
                                 .font(.system(size: 12))
