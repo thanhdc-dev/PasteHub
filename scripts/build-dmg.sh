@@ -62,6 +62,7 @@ fi
 create-dmg \
   --volname "${VOLUME_NAME}" \
   --background "${BACKGROUND_IMAGE_PATH}" \
+  --format UDZO \
   --window-pos 200 120 \
   --window-size 540 380 \
   --icon-size 100 \
