@@ -23,7 +23,13 @@ final class ImageStorageManager {
         appSupportURL.appendingPathComponent("images", isDirectory: true)
     }
 
-    private init() {}
+    private let imageCache = NSCache<NSString, NSImage>()
+    private let imageDataCache = NSCache<NSString, NSData>()
+
+    private init() {
+        imageCache.countLimit = 100
+        imageDataCache.countLimit = 100
+    }
 
     // MARK: - Setup
 
@@ -71,18 +77,38 @@ final class ImageStorageManager {
     // MARK: - Load
 
     func loadImage(named filename: String) -> NSImage? {
+        let cacheKey = filename as NSString
+        if let cachedImage = imageCache.object(forKey: cacheKey) {
+            return cachedImage
+        }
+
         let fileURL = imagesDirectoryURL.appendingPathComponent(filename)
-        return NSImage(contentsOf: fileURL)
+        guard let image = NSImage(contentsOf: fileURL) else { return nil }
+
+        imageCache.setObject(image, forKey: cacheKey)
+        return image
     }
 
     func loadImageData(named filename: String) -> Data? {
+        let cacheKey = filename as NSString
+        if let cachedData = imageDataCache.object(forKey: cacheKey) {
+            return cachedData as Data
+        }
+
         let fileURL = imagesDirectoryURL.appendingPathComponent(filename)
-        return try? Data(contentsOf: fileURL)
+        guard let data = try? Data(contentsOf: fileURL) else { return nil }
+
+        imageDataCache.setObject(data as NSData, forKey: cacheKey)
+        return data
     }
 
     // MARK: - Delete
 
     func deleteImageFile(named filename: String) {
+        let cacheKey = filename as NSString
+        imageCache.removeObject(forKey: cacheKey)
+        imageDataCache.removeObject(forKey: cacheKey)
+
         let fileURL = imagesDirectoryURL.appendingPathComponent(filename)
         try? FileManager.default.removeItem(at: fileURL)
     }
