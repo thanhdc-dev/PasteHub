@@ -36,9 +36,10 @@ final class MenuBarManager {
         }
 
         popover = NSPopover()
-        popover?.contentSize = NSSize(width: 320, height: 500)
+        popover?.contentSize = NSSize(width: 380, height: 600)
         popover?.behavior = .transient
         popover?.animates = true
+        popover?.appearance = NSAppearance(named: .vibrantDark)
         popover?.contentViewController = NSHostingController(
             rootView: ContentView()
                 .environmentObject(clipboardMonitor)
@@ -61,7 +62,14 @@ final class MenuBarManager {
                     of: button,
                     preferredEdge: .minY
                 )
+                popover.contentSize = NSSize(width: 380, height: 600)
                 NSApp.activate(ignoringOtherApps: true)
+
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+                    if let window = self.popover?.contentViewController?.view.window {
+                        window.animationBehavior = .documentWindow
+                    }
+                }
             }
         }
     }

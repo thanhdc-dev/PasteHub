@@ -21,6 +21,10 @@ struct ClipboardItemRow: View {
         selection.mode == .list && selection.index == flatIndex
     }
 
+    private var showActions: Bool {
+        isHovered || isSelected || isPinned
+    }
+
     var body: some View {
         HStack(alignment: .top, spacing: 10) {
 
@@ -73,9 +77,9 @@ struct ClipboardItemRow: View {
 
             Spacer(minLength: 0)
 
-            // Action buttons — chỉ hiện khi hover
-            if isHovered || isSelected {
-                HStack(spacing: 2) {
+            // Action buttons — hiển thị rõ ràng hơn khi được chọn hoặc hover
+            if showActions {
+                HStack(spacing: 4) {
                     IconButton(
                         systemName: isPinned ? "pin.slash" : "pin",
                         action: onPin
@@ -86,11 +90,14 @@ struct ClipboardItemRow: View {
                         isDestructive: true
                     )
                 }
+                .padding(4)
+                .background(Color(NSColor.controlBackgroundColor).opacity(0.85))
+                .clipShape(Capsule())
                 .transition(.opacity)
             }
         }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 10)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 6)
         .background(rowBackground)
         .contentShape(Rectangle())
         .onHover { hovering in
@@ -118,27 +125,29 @@ struct ClipboardItemRow: View {
     }
 
     private var rowBackground: some View {
-        Group {
-            if isFlashing {
-                Color.accent.opacity(0.18)
-            } else if isSelected {
-                Color.accentColor.opacity(0.12)
-            } else if isPinned {
-                Color.accent.opacity(0.06)
-            } else if isHovered {
-                Color.primary.opacity(0.06)
-            } else {
-                Color.clear
+        RoundedRectangle(cornerRadius: 10)
+            .fill(backgroundColor)
+            .overlay(alignment: .leading) {
+                if isSelected {
+                    Rectangle()
+                        .fill(Color.accentColor)
+                        .frame(width: 2.5)
+                        .padding(.vertical, 4)
+                }
             }
-        }
-        // Border trái khi được chọn bằng bàn phím
-        .overlay(alignment: .leading) {
-            if isSelected {
-                Rectangle()
-                    .fill(Color.accentColor)
-                    .frame(width: 2.5)
-                    .padding(.vertical, 4)
-            }
+    }
+
+    private var backgroundColor: Color {
+        if isFlashing {
+            return Color.accent.opacity(0.18)
+        } else if isSelected {
+            return Color.accentColor.opacity(0.12)
+        } else if isPinned {
+            return Color.accent.opacity(0.06)
+        } else if isHovered {
+            return Color.primary.opacity(0.06)
+        } else {
+            return Color.clear
         }
     }
 
@@ -174,11 +183,11 @@ struct ContentTypeIcon: View {
 
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 7)
+            RoundedRectangle(cornerRadius: 8)
                 .fill(bgColor)
-                .frame(width: 28, height: 28)
+                .frame(width: 38, height: 38)
             Image(systemName: systemImage)
-                .font(.system(size: 13))
+                .font(.system(size: 14, weight: .medium))
                 .foregroundStyle(fgColor)
         }
     }
@@ -219,20 +228,20 @@ struct ImageThumbnail: View {
 
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 7)
+            RoundedRectangle(cornerRadius: 8)
                 .fill(Color(NSColor.controlBackgroundColor))
-                .frame(width: 40, height: 40)
+                .frame(width: 38, height: 38)
 
             if let img = image {
                 Image(nsImage: img)
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 40, height: 40)
-                    .clipShape(RoundedRectangle(cornerRadius: 7))
+                    .frame(width: 38, height: 38)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
             } else {
                 Image(systemName: "photo")
                     .foregroundStyle(.tertiary)
-                    .font(.system(size: 16))
+                    .font(.system(size: 15))
             }
         }
         .onAppear {

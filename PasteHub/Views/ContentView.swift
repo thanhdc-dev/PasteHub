@@ -5,10 +5,13 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var monitor: ClipboardMonitor
 
+    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
+
     @State private var searchText = ""
     @State private var activeFilter: ClipboardFilter = .all
     @State private var showClearConfirm = false
     @State private var showSettings = false
+    @State private var showOnboarding = false
 
     // ObservableObject — thay đổi trigger re-render toàn bộ view tree
     @StateObject private var selection = SelectionState()
@@ -48,24 +51,33 @@ struct ContentView: View {
                 SettingsView(showSettings: $showSettings)
                     .transition(.move(edge: .trailing).combined(with: .opacity))
             } else {
+                if showOnboarding {
+                    onboardingView
+                        .padding(.horizontal, 14)
+                        .padding(.top, 10)
+                }
+
                 FilterChipBar(selected: $activeFilter)
                     .onChange(of: activeFilter) { _, _ in
                         searchText = ""
                         selection.index = 0
                     }
+                    .transition(.opacity.combined(with: .move(edge: .top)))
                 Divider()
 
                 if displayedItems.isEmpty {
                     emptyStateView
+                        .transition(.opacity.combined(with: .move(edge: .bottom)))
                 } else {
                     itemListView
+                        .transition(.opacity.combined(with: .move(edge: .bottom)))
                 }
 
                 Divider()
                 footerView
             }
         }
-        .frame(width: 450, height: 500, alignment: .top)
+        .frame(minWidth: 360, idealWidth: 420, maxWidth: 480, minHeight: 500, idealHeight: 560, maxHeight: 680, alignment: .top)
         .onAppear {
             // selection là reference type — closure luôn đọc giá trị mới nhất
             keyboard.onKeyDown = { [weak selection] event in
@@ -91,6 +103,10 @@ struct ContentView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
                 selection.mode = .search
                 selection.index = 0
+            }
+
+            if !hasSeenOnboarding {
+                showOnboarding = true
             }
         }
         .onDisappear { keyboard.stop() }
@@ -265,6 +281,42 @@ struct ContentView: View {
         .padding(14)
     }
 
+    private var onboardingView: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(alignment: .top) {
+                Image(systemName: "sparkles")
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundStyle(Color.accentColor)
+                VStack(alignment: .leading, spacing: 3) {
+                    Text("onboarding.title")
+                        .font(.system(size: 12, weight: .semibold))
+                    Text("onboarding.subtitle")
+                        .font(.system(size: 11))
+                        .foregroundStyle(.secondary)
+                }
+                Spacer()
+                Button {
+                    withAnimation(.easeInOut(duration: 0.2)) {
+                        showOnboarding = false
+                        hasSeenOnboarding = true
+                    }
+                } label: {
+                    Text("onboarding.dismiss")
+                        .font(.system(size: 11, weight: .medium))
+                }
+                .buttonStyle(.bordered)
+                .controlSize(.small)
+            }
+            .padding(10)
+            .background(Color(NSColor.controlBackgroundColor).opacity(0.7))
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color(NSColor.separatorColor), lineWidth: 0.5)
+            )
+        }
+    }
+
     // MARK: - Item List
 
     private var itemListView: some View {
@@ -345,21 +397,47 @@ struct ContentView: View {
     // MARK: - Empty State
 
     private var emptyStateView: some View {
-        VStack(spacing: 10) {
+        VStack(spacing: 12) {
             Image(systemName: searchText.isEmpty ? "clipboard" : "magnifyingglass")
-                .font(.system(size: 28))
+                .font(.system(size: 30))
                 .foregroundStyle(.quaternary)
-            Text(searchText.isEmpty ? "empty.default" : "empty.search")
-                .font(.system(size: 13))
-                .foregroundStyle(.tertiary)
-            if !searchText.isEmpty {
-                Text("empty.search.hint")
+
+            VStack(spacing: 4) {
+                Text(searchText.isEmpty ? String(localized: ("empty.noItems")) : String(localized: ("empty.search")))
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundStyle(.primary)
+                Text(searchText.isEmpty ? String(localized: ("empty.noItemsTip")) : String(localized: ("empty.searchHint")))
                     .font(.system(size: 12))
-                    .foregroundStyle(.quaternary)
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
+            }
+
+            if searchText.isEmpty {
+                VStack(alignment: .leading, spacing: 6) {
+                    tipChip(String(localized: ("empty.spaceTip")))
+                    tipChip(String(localized: ("empty.pinTip")))
+                    tipChip(String(localized: ("empty.shortcutTip")))
+                }
+                .padding(.top, 4)
             }
         }
-        .padding(.top, 60)
+        .padding(.top, 40)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+    }
+
+    private func tipChip(_ text: String) -> some View {
+        HStack(spacing: 6) {
+            Image(systemName: "sparkle")
+                .font(.system(size: 10))
+                .foregroundStyle(Color.accentColor)
+            Text(text)
+                .font(.system(size: 11))
+                .foregroundStyle(.secondary)
+        }
+        .padding(.horizontal, 10)
+        .padding(.vertical, 6)
+        .background(Color(NSColor.controlBackgroundColor).opacity(0.7))
+        .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 
     // MARK: - Footer

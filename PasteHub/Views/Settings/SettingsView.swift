@@ -29,6 +29,25 @@ struct SettingsView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
 
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("settings.title")
+                            .font(.system(size: 14, weight: .semibold))
+                        Text("settings.description")
+                            .font(.system(size: 12))
+                            .foregroundStyle(.secondary)
+                    }
+                    .padding(12)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color(NSColor.controlBackgroundColor).opacity(0.45))
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(Color(NSColor.separatorColor), lineWidth: 0.5)
+                    )
+                    .padding(.horizontal, 14)
+                    .padding(.top, 12)
+                    .padding(.bottom, 8)
+
                     // ── Lịch sử ─────────────────
                     sectionHeader(String(localized: "settings.section.history"))
 

@@ -16,8 +16,8 @@ extension View {
             .foregroundStyle(.tertiary)
             .textCase(.uppercase)
             .padding(.horizontal, 14)
-            .padding(.top, 14)
-            .padding(.bottom, 6)
+            .padding(.top, 18)
+            .padding(.bottom, 8)
     }
 
     /// Row layout chuẩn cho mỗi mục settings.
@@ -28,7 +28,15 @@ extension View {
         HStack(alignment: .center, spacing: 12) {
             content()
         }
-        .padding(.horizontal, 14)
+        .padding(.horizontal, 12)
         .padding(.vertical, 10)
+        .background(Color(NSColor.controlBackgroundColor).opacity(0.35))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color(NSColor.separatorColor), lineWidth: 0.5)
+        )
+        .padding(.horizontal, 14)
+        .padding(.bottom, 8)
     }
 }

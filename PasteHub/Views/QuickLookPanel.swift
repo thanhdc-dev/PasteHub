@@ -18,16 +18,18 @@ final class QuickLookPanel {
         let hostingVC = NSHostingController(rootView: QuickLookView(item: item))
 
         let p = NSPanel(
-            contentRect: NSRect(x: 0, y: 0, width: 520, height: 420),
+            contentRect: NSRect(x: 0, y: 0, width: 560, height: 460),
             styleMask: [.titled, .closable, .resizable, .nonactivatingPanel],
             backing: .buffered,
             defer: false
         )
         p.title = "Quick Look"
         p.contentViewController = hostingVC
-        p.setContentSize(NSSize(width: 520, height: 420))
+        p.setContentSize(NSSize(width: 560, height: 460))
         p.isFloatingPanel = true
-        p.becomesKeyOnlyIfNeeded = true  // ← giữ focus ở popover
+        p.becomesKeyOnlyIfNeeded = true
+        p.isReleasedWhenClosed = false
+        p.animationBehavior = .alertPanel
         p.center()
         p.orderFront(nil)
 

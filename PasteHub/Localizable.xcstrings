@@ -1,1398 +1,1537 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "": {
-      "shouldTranslate": false
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+      "shouldTranslate" : false
     },
-    "·": {
-      "localizations": {
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "."
+    "·" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "."
           }
         }
       }
     },
-    "%lld": {
-      "localizations": {
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld"
+    "%lld" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
           }
         }
       }
     },
-    "%lld items": {
-      "localizations": {
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld mục"
+    "%lld items" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld mục"
           }
         }
       }
     },
-    "100": {
-      "localizations": {
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "100"
+    "100" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "100"
           }
         }
       }
     },
-    "200": {
-      "localizations": {
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "200"
+    "200" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "200"
           }
         }
       }
     },
-    "500": {
-      "localizations": {
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "500"
+    "500" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "500"
           }
         }
       }
     },
-    "1000": {
-      "localizations": {
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1000"
+    "1000" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1000"
           }
         }
       }
     },
-    "app.title": {
-      "comment": "MARK: - Header",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "PasteHub"
+    "app.title" : {
+      "comment" : "MARK: - Header",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PasteHub"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "PasteHub"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PasteHub"
           }
         }
       }
     },
-    "clear.all": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Clear all"
+    "clear.all" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear all"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Xóa tất cả"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xóa tất cả"
           }
         }
       }
     },
-    "clear.cancel": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancel"
+    "clear.cancel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hủy"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hủy"
           }
         }
       }
     },
-    "clear.keepPinned": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Clear (keep pinned)"
+    "clear.keepPinned" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear (keep pinned)"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Xóa (giữ ghim)"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xóa (giữ ghim)"
           }
         }
       }
     },
-    "clear.title": {
-      "comment": "MARK: - Clear dialog",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Clear all history?"
+    "clear.title" : {
+      "comment" : "MARK: - Clear dialog",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear all history?"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Xóa toàn bộ lịch sử?"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xóa toàn bộ lịch sử?"
           }
         }
       }
     },
-    "empty.default": {
-      "comment": "MARK: - Empty state",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nothing copied yet"
+    "Copy" : {
+
+    },
+    "empty.noItems" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No entries were saved"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa có mục nào được lưu"
+          }
+        }
+      }
+    },
+    "empty.noItemsTip" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy a piece of text, URL, or image to see it appear here."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sao chép một đoạn text, URL hoặc ảnh để xem chúng xuất hiện tại đây."
+          }
+        }
+      }
+    },
+    "empty.pinTip" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pin important items to keep at the top of the list"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ghim mục quan trọng để giữ ở đầu danh sách"
+          }
+        }
+      }
+    },
+    "empty.search" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No results found"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không tìm thấy kết quả"
+          }
+        }
+      }
+    },
+    "empty.searchHint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try changing keywords or filters to find the content again"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy thử đổi từ khóa hoặc đổi bộ lọc để tìm lại nội dung."
+          }
+        }
+      }
+    },
+    "empty.shortcutTip" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng phím tắt để mở popover nhanh hơn"
+          }
+        }
+      }
+    },
+    "empty.spaceTip" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Press Space for a quick preview"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhấn Space để xem preview nhanh"
+          }
+        }
+      }
+    },
+    "exclude.add" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add app"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm ứng dụng"
+          }
+        }
+      }
+    },
+    "exclude.addAll" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add All"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Chưa có gì được copy"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm tất cả"
           }
         }
       }
     },
-    "empty.search": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "No results found"
+    "exclude.addButton" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Không tìm thấy kết quả"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm"
           }
         }
       }
     },
-    "empty.search.hint": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Try a different keyword"
+    "exclude.addFrontmost" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frontmost App"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Thử từ khóa khác"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App đang mở"
           }
         }
       }
     },
-    "exclude.add": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add app"
+    "exclude.addManual" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter Bundle ID"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Thêm ứng dụng"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhập Bundle ID"
           }
         }
       }
     },
-    "exclude.addAll": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add All"
+    "exclude.allAdded" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All added"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Thêm tất cả"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã thêm tất cả"
           }
         }
       }
     },
-    "exclude.addButton": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add"
+    "exclude.bundleID" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bundle ID"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Thêm"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bundle ID"
           }
         }
       }
     },
-    "exclude.addFrontmost": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Frontmost App"
+    "exclude.bundleIDHint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Find bundle ID: Terminal → `osascript -e 'id of app \"AppName\"'`"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "App đang mở"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tìm bundle ID: Terminal → `osascript -e 'id of app \"AppName\"'`"
           }
         }
       }
     },
-    "exclude.addManual": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Enter Bundle ID"
+    "exclude.bundleIDPlaceholder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "com.example.App"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nhập Bundle ID"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "com.example.App"
           }
         }
       }
     },
-    "exclude.allAdded": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "All added"
+    "exclude.description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copied content from these apps won't be saved to history."
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Đã thêm tất cả"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nội dung copy từ những app này sẽ không được lưu vào lịch sử."
           }
         }
       }
     },
-    "exclude.bundleID": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bundle ID"
+    "exclude.displayName" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Display Name (optional)"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bundle ID"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tên hiển thị (tuỳ chọn)"
           }
         }
       }
     },
-    "exclude.bundleIDHint": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Find bundle ID: Terminal → `osascript -e 'id of app \"AppName\"'`"
+    "exclude.empty" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No excluded apps yet"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tìm bundle ID: Terminal → `osascript -e 'id of app \"AppName\"'`"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chưa có ứng dụng nào bị loại trừ"
           }
         }
       }
     },
-    "exclude.bundleIDPlaceholder": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "com.example.App"
+    "exclude.errorDuplicate" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This Bundle ID is already in the list."
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "com.example.App"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bundle ID này đã có trong danh sách."
           }
         }
       }
     },
-    "exclude.description": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Copied content from these apps won't be saved to history."
+    "exclude.errorEmptyBundle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bundle ID must not be empty."
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nội dung copy từ những app này sẽ không được lưu vào lịch sử."
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bundle ID không được để trống."
           }
         }
       }
     },
-    "exclude.displayName": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Display Name (optional)"
+    "exclude.errorFrontmost" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could not get frontmost app info, or it's already in the list."
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tên hiển thị (tuỳ chọn)"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không thể lấy thông tin app đang mở, hoặc đã có trong danh sách."
           }
         }
       }
     },
-    "exclude.empty": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "No excluded apps yet"
+    "exclude.helpFrontmost" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add the active app to the exclude list"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Chưa có ứng dụng nào bị loại trừ"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm ứng dụng đang active vào danh sách loại trừ"
           }
         }
       }
     },
-    "exclude.errorDuplicate": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "This Bundle ID is already in the list."
+    "exclude.manualTitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add App Manually"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bundle ID này đã có trong danh sách."
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm ứng dụng thủ công"
           }
         }
       }
     },
-    "exclude.errorEmptyBundle": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bundle ID must not be empty."
+    "exclude.passwordManagers" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password Managers"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bundle ID không được để trống."
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password Managers"
           }
         }
       }
     },
-    "exclude.errorFrontmost": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Could not get frontmost app info, or it's already in the list."
+    "exclude.placeholderName" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leave empty to use Bundle ID"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Không thể lấy thông tin app đang mở, hoặc đã có trong danh sách."
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Để trống sẽ dùng Bundle ID"
           }
         }
       }
     },
-    "exclude.helpFrontmost": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add the active app to the exclude list"
+    "exclude.title" : {
+      "comment" : "MARK: - Exclude Apps",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Excluded Applications"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Thêm ứng dụng đang active vào danh sách loại trừ"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ứng dụng bị loại trừ"
           }
         }
       }
+    },
+    "File" : {
+
     },
-    "exclude.manualTitle": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add App Manually"
+    "filter.all" : {
+      "comment" : "MARK: - Filter",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Thêm ứng dụng thủ công"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tất cả"
           }
         }
       }
     },
-    "exclude.passwordManagers": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Password Managers"
+    "filter.file" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Files"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Password Managers"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "File"
           }
         }
       }
     },
-    "exclude.placeholderName": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Leave empty to use Bundle ID"
+    "filter.image" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Images"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Để trống sẽ dùng Bundle ID"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hình ảnh"
           }
         }
       }
     },
-    "exclude.title": {
-      "comment": "MARK: - Exclude Apps",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Excluded Applications"
+    "filter.text" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Text"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ứng dụng bị loại trừ"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Văn bản"
           }
         }
       }
     },
-    "filter.all": {
-      "comment": "MARK: - Filter",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "All"
+    "filter.url" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tất cả"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL"
           }
         }
       }
     },
-    "filter.file": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Files"
+    "footer.clear" : {
+      "comment" : "MARK: - Footer",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear all"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "File"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xóa tất cả"
           }
         }
       }
     },
-    "filter.image": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Images"
+    "footer.items" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld items"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hình ảnh"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld mục"
           }
         }
       }
     },
-    "filter.text": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Text"
+    "itemContextMenu.copy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Văn bản"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sao chép"
           }
         }
       }
     },
-    "filter.url": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "URL"
+    "itemContextMenu.delete" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "URL"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xóa"
           }
         }
       }
     },
-    "footer.clear": {
-      "comment": "MARK: - Footer",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Clear all"
+    "itemContextMenu.pin" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pin"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Xóa tất cả"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ghim"
           }
         }
       }
     },
-    "footer.items": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld items"
+    "itemContextMenu.unpin" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unpin"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld mục"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bỏ ghim"
           }
         }
       }
     },
-    "itemContextMenu.copy": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Copy"
+    "nav.settings" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sao chép"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt"
           }
         }
       }
     },
-    "itemContextMenu.delete": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Delete"
+    "onboarding.dismiss" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Understood"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Xóa"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã hiểu"
           }
         }
       }
     },
-    "itemContextMenu.pin": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pin"
+    "onboarding.subtitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use the arrow keys to select, Space to preview, and pin important items to keep them longer"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ghim"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sử dụng các phím mũi tên để chọn, phím Space để xem trước và ghim các mục quan trọng để giữ chúng lâu hơn."
           }
         }
       }
     },
-    "itemContextMenu.unpin": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Unpin"
+    "onboarding.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quick Tip"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bỏ ghim"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mẹo nhanh"
           }
         }
       }
+    },
+    "Open in Browser" : {
+
+    },
+    "Open link" : {
+
+    },
+    "Preview" : {
+
+    },
+    "Preview image" : {
+
     },
-    "nav.settings": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Settings"
+    "quicklook.from %@" : {
+      "comment" : "Quick Look panel - source app name",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "From %@"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cài đặt"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Từ %@"
           }
         }
       }
     },
-    "quicklook.from %@": {
-      "comment": "Quick Look panel - source app name",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "From %@"
+    "quicklook.loadError" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unable to load image"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Từ %@"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không thể tải ảnh"
           }
         }
       }
     },
-    "quicklook.loadError": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Unable to load image"
+    "quicklook.openBrowser" : {
+      "comment" : "MARK: - Quick Look",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open in browser →"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Không thể tải ảnh"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở trong trình duyệt →"
           }
         }
       }
     },
-    "quicklook.openBrowser": {
-      "comment": "MARK: - Quick Look",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Open in browser →"
+    "search.placeholder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search history..."
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mở trong trình duyệt →"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tìm trong lịch sử..."
           }
         }
       }
     },
-    "search.placeholder": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Search history..."
+    "section.pinned" : {
+      "comment" : "MARK: - Section",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pinned"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tìm trong lịch sử..."
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã ghim"
           }
         }
       }
     },
-    "section.pinned": {
-      "comment": "MARK: - Section",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pinned"
+    "section.recent" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recent"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Đã ghim"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gần đây"
           }
         }
       }
     },
-    "section.recent": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Recent"
+    "settings.autoPaste" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auto Paste"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gần đây"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tự động dán"
           }
         }
       }
     },
-    "settings.clearAllHistory": {
-      "comment": "MARK: - Settings (Data)",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Clear all history"
+    "settings.autoPaste.accessibilityDenied" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accessibility Permission Required"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Xóa toàn bộ lịch sử"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cần cấp quyền Accessibility"
           }
         }
       }
     },
-    "settings.language": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Language"
+    "settings.autoPaste.accessibilityGranted" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accessibility Permission Granted"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ngôn ngữ"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã cấp quyền Accessibility"
           }
         }
       }
     },
-    "settings.language.en": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "English"
+    "settings.autoPaste.description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatically paste ⌘V after selecting an item. Requires Accessibility permission."
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tiếng Anh"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tự động gửi ⌘V sau khi chọn mục. Yêu cầu quyền Accessibility."
           }
         }
       }
     },
-    "settings.language.restart": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Restart Now"
+    "settings.autoPaste.footnote" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is an opt‑in feature. Auto‑paste simulates ⌘V in the previously active app. It requires Accessibility permission to send keystrokes."
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Khởi động lại"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đây là tính năng tùy chọn. Tự động dán mô phỏng ⌘V vào ứng dụng đang dùng trước đó. Cần quyền Accessibility để gửi phím."
           }
         }
       }
     },
-    "settings.language.restartMessage": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Language change will take effect after restarting PasteHub."
+    "settings.autoPaste.openSettings" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open System Settings…"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Thay đổi ngôn ngữ sẽ có hiệu lực sau khi khởi động lại."
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở System Settings…"
           }
         }
       }
     },
-    "settings.language.restartRequired": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Restart Required"
+    "settings.clearAllHistory" : {
+      "comment" : "MARK: - Settings (Data)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear all history"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Khởi động lại"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xóa toàn bộ lịch sử"
           }
         }
       }
     },
-    "settings.language.vi": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vietnamese"
+    "settings.description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adjust how history is saved, keyboard shortcuts, and auto-paste to suit your usage habits."
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tiếng Việt"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Điều chỉnh cách lưu lịch sử, phím tắt và tự động paste để phù hợp với thói quen sử dụng của bạn."
           }
         }
       }
     },
-    "settings.launchAtLogin": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Launch at login"
+    "settings.language" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Khởi động cùng macOS"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ngôn ngữ"
           }
         }
       }
     },
-    "settings.launchAtLogin.description": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Automatically launch on login"
+    "settings.language.en" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "English"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tự động chạy khi đăng nhập"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếng Anh"
           }
         }
       }
     },
-    "settings.maxItems": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Max items"
+    "settings.language.restart" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restart Now"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Số item tối đa"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khởi động lại"
           }
         }
       }
     },
-    "settings.retention": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Keep history"
+    "settings.language.restartMessage" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language change will take effect after restarting PasteHub."
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Giữ lịch sử"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thay đổi ngôn ngữ sẽ có hiệu lực sau khi khởi động lại."
           }
         }
       }
     },
-    "settings.retention.1day": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1 day"
+    "settings.language.restartRequired" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restart Required"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1 ngày"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khởi động lại"
           }
         }
       }
     },
-    "settings.retention.7days": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "7 days"
+    "settings.language.vi" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vietnamese"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "7 ngày"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếng Việt"
           }
         }
       }
     },
-    "settings.retention.30days": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "30 days"
+    "settings.launchAtLogin" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Launch at login"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "30 ngày"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khởi động cùng macOS"
           }
         }
       }
     },
-    "settings.retention.description": {
-      "comment": "MARK: - Settings (Descriptions)",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Items older than this will be auto‑deleted."
+    "settings.launchAtLogin.description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatically launch on login"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Item cũ hơn mốc này sẽ tự động xóa"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tự động chạy khi đăng nhập"
           }
         }
       }
     },
-    "settings.retention.forever": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Forever"
+    "settings.maxItems" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Max items"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mãi mãi"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Số item tối đa"
           }
         }
       }
     },
-    "settings.saveFilePaths": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Save file paths"
+    "settings.retention" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep history"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lưu đường dẫn file"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giữ lịch sử"
           }
         }
       }
     },
-    "settings.saveFilePaths.description": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "When dragging files to other apps"
+    "settings.retention.1day" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 day"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Khi kéo thả file vào app khác"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 ngày"
           }
         }
       }
     },
-    "settings.saveImages": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Save images"
+    "settings.retention.7days" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 days"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lưu hình ảnh"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 ngày"
           }
         }
       }
     },
-    "settings.saveImages.description": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Save copied images to disk (~few MB per image)"
+    "settings.retention.30days" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "30 days"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lưu ảnh copy vào disk (~vài MB/ảnh)"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "30 ngày"
           }
         }
       }
     },
-    "settings.section.data": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Data"
+    "settings.retention.description" : {
+      "comment" : "MARK: - Settings (Descriptions)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Items older than this will be auto‑deleted."
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dữ liệu"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Item cũ hơn mốc này sẽ tự động xóa"
           }
         }
       }
     },
-    "settings.section.history": {
-      "comment": "MARK: - Settings (Section headers)",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "History"
+    "settings.retention.forever" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forever"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lịch sử"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mãi mãi"
           }
         }
       }
     },
-    "settings.section.shortcut": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Shortcut"
+    "settings.saveFilePaths" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save file paths"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Phím tắt"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lưu đường dẫn file"
           }
         }
       }
     },
-    "settings.section.system": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "System"
+    "settings.saveFilePaths.description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "When dragging files to other apps"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hệ thống"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khi kéo thả file vào app khác"
           }
         }
       }
     },
-    "settings.shortcut.open": {
-      "comment": "MARK: - Settings (Shortcut)",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Open PasteHub"
+    "settings.saveImages" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save images"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mở PasteHub"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lưu hình ảnh"
           }
         }
       }
     },
-    "settings.shortcut.pressKey": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Press key…"
+    "settings.saveImages.description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save copied images to disk (~few MB per image)"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nhấn phím…"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lưu ảnh copy vào disk (~vài MB/ảnh)"
           }
         }
       }
     },
-    "settings.shortcut.tapToChange": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tap to change"
+    "settings.section.autopaste" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auto Paste"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nhấn để thay đổi"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tự động dán"
           }
         }
       }
     },
-    "settings.title": {
-      "comment": "MARK: - Settings",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Settings"
+    "settings.section.data" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cài đặt"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dữ liệu"
           }
         }
       }
     },
-    "settings.section.autopaste": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Auto Paste"
+    "settings.section.history" : {
+      "comment" : "MARK: - Settings (Section headers)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "History"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tự động dán"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lịch sử"
           }
         }
       }
     },
-    "settings.autoPaste": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Auto Paste"
+    "settings.section.shortcut" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shortcut"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tự động dán"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phím tắt"
           }
         }
       }
     },
-    "settings.autoPaste.description": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Automatically paste ⌘V after selecting an item. Requires Accessibility permission."
+    "settings.section.system" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "System"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tự động gửi ⌘V sau khi chọn mục. Yêu cầu quyền Accessibility."
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hệ thống"
           }
         }
       }
     },
-    "settings.autoPaste.accessibilityGranted": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Accessibility Permission Granted"
+    "settings.shortcut.open" : {
+      "comment" : "MARK: - Settings (Shortcut)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open PasteHub"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Đã cấp quyền Accessibility"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mở PasteHub"
           }
         }
       }
     },
-    "settings.autoPaste.accessibilityDenied": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Accessibility Permission Required"
+    "settings.shortcut.pressKey" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Press key…"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cần cấp quyền Accessibility"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhấn phím…"
           }
         }
       }
     },
-    "settings.autoPaste.openSettings": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Open System Settings…"
+    "settings.shortcut.tapToChange" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to change"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mở System Settings…"
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhấn để thay đổi"
           }
         }
       }
     },
-    "settings.autoPaste.footnote": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "This is an opt‑in feature. Auto‑paste simulates ⌘V in the previously active app. It requires Accessibility permission to send keystrokes."
+    "settings.title" : {
+      "comment" : "MARK: - Settings",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
           }
         },
-        "vi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Đây là tính năng tùy chọn. Tự động dán mô phỏng ⌘V vào ứng dụng đang dùng trước đó. Cần quyền Accessibility để gửi phím."
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cài đặt"
           }
         }
       }
     }
   },
-  "version": "1.1"
+  "version" : "1.1"
 }
