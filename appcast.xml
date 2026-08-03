@@ -2,6 +2,22 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
         <item>
+    <title>Version 1.2.1</title>
+    <sparkle:releaseNotesLink>
+        https://github.com/thanhdc-dev/PasteHub/releases/tag/v1.2.1
+    </sparkle:releaseNotesLink>
+    <pubDate>Mon, 03 Aug 2026 13:56:19 +0000</pubDate>
+    <sparkle:version>12</sparkle:version>
+    <sparkle:shortVersionString>1.2.1</sparkle:shortVersionString>
+    <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+    <enclosure
+        url="https://github.com/thanhdc-dev/PasteHub/releases/download/v1.2.1/PasteHub-Installer-1.2.1.dmg"
+        sparkle:edSignature="EmTMrk5fzxZCJNimcdL0ZkCRJLBmy5O0XDjQ+WRgudU7ku2ILDe0YS+qoevqgSWHFIDCXyCnEJAt/TaEfaTZAQ=="
+        length="3230818"
+        type="application/x-apple-diskimage" />
+</item>
+
+        <item>
     <title>Version 1.2.0</title>
     <sparkle:releaseNotesLink>
         https://github.com/thanhdc-dev/PasteHub/releases/tag/v1.2.0
