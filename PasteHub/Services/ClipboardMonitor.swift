@@ -4,7 +4,10 @@ import Combine
 class ClipboardMonitor: ObservableObject {
     @Published var items: [ClipboardItem] = []
 
-    private var pasteboardObserver: NSObjectProtocol?
+    private var timer: DispatchSourceTimer?
+    private let pollQueue = DispatchQueue(label: "com.pastehub.clipboardMonitor", qos: .utility)
+    private let pollInterval: TimeInterval = 0.75
+    private let pollLeeway: DispatchTimeInterval = .milliseconds(250)
     private var lastChangeCount: Int = NSPasteboard.general.changeCount
     private let db = DatabaseManager.shared
 
@@ -14,25 +17,28 @@ class ClipboardMonitor: ObservableObject {
         // Load items từ DB khi khởi động
         loadFromDatabase()
 
-        guard pasteboardObserver == nil else { return }
+        guard timer == nil else { return }
 
         let pasteboard = NSPasteboard.general
         lastChangeCount = pasteboard.changeCount
 
-        pasteboardObserver = NotificationCenter.default.addObserver(
-            forName: Notification.Name("NSPasteboardDidChangeNotification"),
-            object: pasteboard,
-            queue: .main
-        ) { [weak self] _ in
-            self?.checkForChanges()
+        let source = DispatchSource.makeTimerSource(queue: pollQueue)
+        source.schedule(deadline: .now() + pollInterval,
+                        repeating: pollInterval,
+                        leeway: pollLeeway)
+        source.setEventHandler { [weak self] in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.checkForChanges()
+            }
         }
+        source.resume()
+        timer = source
     }
 
     func stop() {
-        if let observer = pasteboardObserver {
-            NotificationCenter.default.removeObserver(observer)
-        }
-        pasteboardObserver = nil
+        timer?.cancel()
+        timer = nil
     }
 
     // MARK: - Core Logic

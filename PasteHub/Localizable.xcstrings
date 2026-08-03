@@ -241,6 +241,12 @@
     },
     "empty.shortcutTip" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use keyboard shortcuts to open popovers faster."
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -950,6 +956,38 @@
         }
       }
     },
+    "settings.autoCheckForUpdates" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check for updates automatically"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tự động kiểm tra cập nhật"
+          }
+        }
+      }
+    },
+    "settings.autoCheckForUpdates.description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable periodic automatic update checks"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bật kiểm tra cập nhật tự động theo chu kỳ"
+          }
+        }
+      }
+    },
     "settings.autoPaste" : {
       "localizations" : {
         "en" : {
@@ -1465,6 +1503,22 @@
         }
       }
     },
+    "settings.section.updates" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updates"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cập nhật"
+          }
+        }
+      }
+    },
     "settings.shortcut.open" : {
       "comment" : "MARK: - Settings (Shortcut)",
       "localizations" : {
@@ -1514,50 +1568,20 @@
         }
       }
     },
-    "settings.autoCheckForUpdates" : {
+    "settings.title" : {
+      "comment" : "MARK: - Settings",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Check for updates automatically"
+            "value" : "Settings"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tự động kiểm tra cập nhật"
-          }
-        }
-      }
-    },
-    "settings.autoCheckForUpdates.description" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enable periodic automatic update checks"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bật kiểm tra cập nhật tự động theo chu kỳ"
-          }
-        }
-      }
-    },
-    "settings.section.updates" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Updates"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cập nhật"
+            "value" : "Cài đặt"
           }
         }
       }
@@ -1654,24 +1678,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chọn tần suất kiểm tra cập nhật"
-          }
-        }
-      }
-    },
-    "settings.title" : {
-      "comment" : "MARK: - Settings",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Settings"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cài đặt"
           }
         }
       }
